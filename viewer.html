@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>all-platform movie night streamer</title>
+    <!-- Peer5 scripts -->
+    <!--script src="//api.peer5.com/peer5.js?id=PEER5_CUSTOMER_ID"></script-->
+    <!--script src="//api.peer5.com/peer5.videojs7.dash.plugin.js"></script-->
+
+    <script type=text/javascript" src="//domain.com/videojs/video.min.js"></script>
+    <script type=text/javascript" src="//domain.com/videojs/nuevo.min.js"></script>
+
+    <!-- Player scripts -->
+    <link rel="stylesheet" href="//vjs.zencdn.net/7.7.4/video-js.min.css">
+    <script src="https://vjs.zencdn.net/7.7.4/video.min.js"></script>
+</head>
+<body>
+
+    <script type="text/javascript">
+        var ip = location.hostname;
+    </script>
+
+    <center>
+        <video id="player" class="video-js vjs-default-skin" height="360" width="640" controls autoplay preload="auto"></video>
+    </center>
+    <script>
+        var player = videojs('#player', {
+          sources: [
+            {src: 'rtmp://'+ip+'/live/stream', type: "rtmp/mp4"},
+            {src: 'http://'+ip+':80/hls/stream.m3u8', type: "application/x-mpegURL"},
+	    {src: 'http://'+ip+':80/dash/stream.mpd', type: "application/dash+xml"}
+	  ]
+        });
+   </script>
+</body>
+</html> 
