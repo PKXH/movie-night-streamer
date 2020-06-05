@@ -3,7 +3,7 @@ Web-based movie streamer
 
 Installation:
 -------------
-1) Install webfs (via your favorite package installer)
+1) Install webfs web server (via your favorite package installer)
 2) Install nginx+rtmp (use instructions at https://www.nginx.com/blog/video-streaming-for-remote-learning-with-nginx/)
 3) Add viewer.html and index.html symlinks to the web root directory.
 4) Add nginx.conf symlink to replace installation nginx.conf
