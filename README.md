@@ -1,5 +1,5 @@
 # movie-night-streamer
-Web-based movie streamer
+Web-based ffmpeg-sourced movie streamer
 
 ## Installation
 1. Install **webfs** web server (via your favorite package installer)
