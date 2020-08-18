@@ -9,10 +9,12 @@
 
     <script type=text/javascript" src="//domain.com/videojs/video.min.js"></script>
     <script type=text/javascript" src="//domain.com/videojs/nuevo.min.js"></script>
+    <script type=text/javascript" src="/videojs-contrib-hls.js"></script>
 
     <!-- Player scripts -->
     <link rel="stylesheet" href="//vjs.zencdn.net/7.7.4/video-js.min.css">
     <script src="https://vjs.zencdn.net/7.7.4/video.min.js"></script>
+    <script src="https://unpkg.com/videojs-contrib-hls@4.1.1/dist/videojs-contrib-hls.js"></script>
 </head>
 <body>
 
@@ -21,14 +23,14 @@
     </script>
 
     <center>
-        <video id="player" class="video-js vjs-default-skin" height="360" width="640" controls autoplay preload="auto"></video>
+        <video id="player" class="video-js vjs-default-skin" height="540" width="960" controls autoplay preload="auto"></video>
     </center>
     <script>
-        var player = videojs('#player', {
+	    var player = videojs('#player', { fluid: true, responsive: true,
           sources: [
             {src: 'rtmp://'+ip+'/live/stream', type: "rtmp/mp4"},
             {src: 'http://'+ip+':80/hls/stream.m3u8', type: "application/x-mpegURL"},
-	    {src: 'http://'+ip+':80/dash/stream.mpd', type: "application/dash+xml"}
+	    {src: 'http://'+ip+':80/dash/stream.mpd', type: "application/dash+xml"} 
 	  ]
         });
    </script>
