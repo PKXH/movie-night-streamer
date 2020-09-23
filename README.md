@@ -9,7 +9,7 @@ Web-based ffmpeg-sourced movie streamer
 5. Create working directory for working with videos.
 6. Symlink command *.sh* scripts into working directory.
 7. Add videos to be streamed to working directory.
-8. Unblock ports 80, 1935, and 8080-8081 if firewalled.
+8. Unblock ports **80**, **1935**, and **8080-8081** if firewalled.
 
 ## Run Procedure
 1. Start viewer page web server: `sudo webfsd -F -p 8081 -f index.html`
