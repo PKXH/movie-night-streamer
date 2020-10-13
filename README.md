@@ -14,14 +14,14 @@ If you decide to edit the `nginx.conf` to enable DASH encoding, or to add more d
 3. Add *viewer.html* and *index.html* symlinks to the web root directory.
 4. Add *nginx.conf* symlink to replace installation *nginx.conf*
 5. Create a directory to hold your videos.
-6. Symlink command *.sh* scripts into this directory.
+6. Symlink command *.sh* scripts into this same directory.
 7. Add videos to be streamed to the same directory.
 8. Unblock ports **80**, **1935**, and **8080-8081** if firewalled.
 
 ## Run Procedure
 #### (do this on the machine people will be connecting to)
 1. Start viewer page web server: `sudo webfsd -F -p 8081 -f index.html`
-2. Verify reverse proxy server configuration squares: `sudo nginx -t`
+2. Verify that the reverse proxy server configuration squares: `sudo nginx -t`
 3. Start reverse proxy server: `sudo nginx`
 
 ### remote command line-based option
