@@ -13,9 +13,9 @@ Also, if you decide to edit the `nginx.conf` to enable DASH encoding, or to add 
 2. Install **nginx**+**rtmp** (use instructions [here](https://www.nginx.com/blog/video-streaming-for-remote-learning-with-nginx/))
 3. Add *viewer.html* and *index.html* symlinks to the web root directory.
 4. Add *nginx.conf* symlink to replace installation *nginx.conf*
-5. Create working directory for working with videos.
-6. Symlink command *.sh* scripts into working directory.
-7. Add videos to be streamed to working directory.
+5. Create a directory to hold your videos.
+6. Symlink command *.sh* scripts into this directory.
+7. Add videos to be streamed to the same directory.
 8. Unblock ports **80**, **1935**, and **8080-8081** if firewalled.
 
 ## Run Procedure
@@ -26,7 +26,7 @@ Also, if you decide to edit the `nginx.conf` to enable DASH encoding, or to add 
 
 ### remote command line-based option
 #### (do this on the machine that people will be connecting to)
-4. On a console connected to your server, start playing movie file *movie.mp4*: `./reel.sh movie.mp4` 
+4. On a console connected to your server, go to the video directory and start playing movie file *movie.mp4*: `./reel.sh movie.mp4` 
    **OR** start playing movie file *movie.mp4* on an endless loop: `./loop.sh movie.mp4`
 
 ### remote livestream option
