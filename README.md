@@ -1,5 +1,5 @@
 # movie-night-streamer
-A Web-based ffmpeg-sourced movie streamer with dynamic bitrate throttling
+***A Web-based ffmpeg-sourced movie streamer with dynamic bitrate throttling***
 
 I've used this to host to about 10 people on a cheap, piddly, un-accelerated AWS EC2 micro instance (running Ubuntu) with no problems, but you'll probably want to make sure you get all the bugs worked out on a local machine first before you start paying for cpu and bandwidth usage. 
 
