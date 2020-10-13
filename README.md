@@ -11,12 +11,13 @@ If you decide to edit the `nginx.conf` to enable DASH encoding, or to add more d
 #### (do this on the machine people will be connecting to)
 1. Install **webfs** web server (via your favorite package installer)
 2. Install **nginx**+**rtmp** (use instructions [here](https://www.nginx.com/blog/video-streaming-for-remote-learning-with-nginx/))
-3. Add *viewer.html* and *index.html* symlinks to the web root directory.
-4. Add *nginx.conf* symlink to replace installation *nginx.conf*
-5. Create a directory to hold your videos.
-6. Symlink command *.sh* scripts into this same directory.
-7. Add videos to be streamed to the same directory.
-8. Unblock ports **80**, **1935**, and **8080-8081** if firewalled.
+3. Clone the `movie-night-streamer` repo onto the machine.
+4. Add *viewer.html* and *index.html* symlinks to the web root directory.
+5. Add *nginx.conf* symlink to replace installation *nginx.conf*
+6. Create a directory to hold your videos.
+7. Symlink command *.sh* scripts into this same directory.
+8. Add videos to be streamed to the same directory.
+9. Unblock ports **80**, **1935**, and **8080-8081** if firewalled.
 
 ## Run Procedure
 #### (do this on the machine people will be connecting to)
