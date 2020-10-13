@@ -1,11 +1,11 @@
 # movie-night-streamer
 A Web-based ffmpeg-sourced movie streamer with dynamic bitrate throttling
 
-I've used this to host to about 10 people on a cheap, piddly, un-accelerated AWS EC2 micro instance with no problems, but you'll probably want to make sure you get all the bugs worked out on a local machine first before you start paying for cpu and bandwidth usage. 
+I've used this to host to about 10 people on a cheap, piddly, un-accelerated AWS EC2 micro instance (running Ubuntu) with no problems, but you'll probably want to make sure you get all the bugs worked out on a local machine first before you start paying for cpu and bandwidth usage. 
 
 Also, if you decide to edit the `nginx.conf` to enable DASH encoding, or to add more dynamic bitrate throttling resolutions for HLS, you may want to opt for a hosting intance with some GPU-acceleration. (Note that I usually pre-emptively transcode my videos to about a 1600kbps bitrate, & tuned for fast decoding, but you probably won't have to be so aggressive with some GPU-acceleration. Also, if you're using the "remote livestream option" below, programs like [OBS](https://obsproject.com) will let you squelch the bitrate locally, which might allow you to transfer some of the load to your local machine. Anyway, just mess around with it and find a balance that works for you :)
 
-Also: if you're using a cloud server *do not forget to stop or shutdown the instance when you're done* or your compute provider will be more-than-happy to keep charging you for the uptime!
+**Also:** if you're using a cloud server ***do not forget to stop or shutdown the instance when you're done*** or your compute provider will be more-than-happy to keep charging you for the uptime!
 
 ## Installation
 #### (do this on the machine people will be connecting to)
