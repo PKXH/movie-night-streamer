@@ -31,7 +31,7 @@ Also, if you decide to edit the `nginx.conf` to enable DASH encoding, or to add 
 
 ### remote livestream option
 #### (do this on your local machine if you want to use the nginx machine purely as a re-streamer)
-4. Set up an ssh tunnel from your local machine to the server on which you're running nginx & webfs **OR** make sure port **1935** is unblocked on the remote server
+4. Set up an ssh tunnel to forward port **1935** from your local machine to the server on which you're running nginx & webfs **OR** make sure port **1935** is unblocked on the remote server
 5. Play your video using your local rtmp-stream capable app ([OBS](https://obsproject.com), [VLC](https://www.videolan.org/vlc/index.html), [ffmpeg](https://trac.ffmpeg.org/wiki/StreamingGuide), etc.) and (if ssh-tunneling) set it to rtmp-stream to `http://localhost:1935/ingest/stream` **OR** (if port-connecting) set it to rtmp-stream to `http://<your nginx machine's ip address>:1935/ingest/stream` (note you can change the "stream" portion of the URL to a custom stream-key for security by changing the name of the "stream" application context in `nginx.conf`)
 
 At this point, your video should be visible at `http://<your nginx machine's ip address>:8081/viewer.html`. Enjoy!
