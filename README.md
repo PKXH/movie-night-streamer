@@ -10,7 +10,7 @@ Also, if you decide to edit the `nginx.conf` to enable DASH encoding, or to add 
 ## Installation
 #### (do this on the machine people will be connecting to)
 1. Install **webfs** web server (via your favorite package installer)
-2. Install **nginx**+**rtmp** (use instructions [here](https://www.nginx.com/blog/video-streaming-for-remote-learning-with-nginx/)) on the machine people will be connecting to
+2. Install **nginx**+**rtmp** (use instructions [here](https://www.nginx.com/blog/video-streaming-for-remote-learning-with-nginx/))
 3. Add *viewer.html* and *index.html* symlinks to the web root directory.
 4. Add *nginx.conf* symlink to replace installation *nginx.conf*
 5. Create working directory for working with videos.
