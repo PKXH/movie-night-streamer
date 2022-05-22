@@ -5,7 +5,9 @@ I've used this to host to about 10 people on a cheap, piddly, un-accelerated AWS
 
 If you decide to edit the `nginx.conf` to enable DASH encoding, or to add more dynamic bitrate throttling resolutions for HLS, you may want to opt for a hosting instance with some GPU-acceleration. (Note that I usually pre-emptively transcode my videos down to about a 1600kbps bitrate, & tuned for fast decoding, but you probably won't have to be so aggressive with some GPU on the nginx side. Also, if you're using the "remote livestream option" below, programs like [OBS](https://obsproject.com) will let you soft-cap the bitrate locally, which should allow you to transfer some of the load to your local machine. Anyway, just mess around with it and find a balance that works for you :)
 
-**Also:** if you're using a cloud server to bounce the stream out to everybody ***do not forget to stop the instance when you're done*** or your compute provider will be more-than-happy to keep charging you for the uptime!
+> **Warning**
+> 
+> If you're using a cloud server to bounce the stream out to everybody ***do not forget to stop the instance when you're done*** or your compute provider will be more-than-happy to keep charging you for the uptime!
 
 ## Installation
 #### (do this on the machine people will be connecting to)
